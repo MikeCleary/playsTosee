@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  production: MyString
+  genre_id: 1
+  location_id: 1
+  author_id: 1
+  rating: 1
+
+two:
+  production: MyString
+  genre_id: 1
+  location_id: 1
+  author_id: 1
+  rating: 1
