@@ -5,5 +5,6 @@ describe Event do
     it { should have_many(:starrings) }
     it { should have_many(:leads).through(:starrings) }
     it { should belong_to(:venue) }
+    it { should belong_to(:author) }
   end
 end
