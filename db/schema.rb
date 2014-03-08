@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140212214304) do
+ActiveRecord::Schema.define(version: 20140308110710) do
 
   create_table "authors", force: true do |t|
     t.string   "name"
@@ -54,12 +54,12 @@ ActiveRecord::Schema.define(version: 20140212214304) do
 
   create_table "venues", force: true do |t|
     t.string   "name"
-    t.string   "city"
-    t.string   "country"
+    t.integer  "country_id"
+    t.integer  "city_id"
+    t.string   "address"
     t.string   "postcode"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "company"
   end
 
 end
