@@ -6,7 +6,7 @@ class PagesController < ApplicationController
 
 
   def search
-    
+    Event.where('name LIKE ?', params[:event])
   end
 
 end

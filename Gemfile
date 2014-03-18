@@ -18,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem "ransack"
 
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
