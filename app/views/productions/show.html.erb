@@ -1,0 +1,15 @@
+<div class="event-details">
+  <h1><%= @production.title %></h1>
+  <img src="">
+  <h3>At: <%= @production.venue.name %>, <%= @production.city.name %></h3>
+</div>
+
+<ul class="reviews">
+  <% @production.reviews.each do |review| %>
+    <li>
+    <h4>Rating: <%= review.rating %> </h4>
+    <p><%= review.text %></p>
+    </li>
+  <% end %>
+</ul>
+

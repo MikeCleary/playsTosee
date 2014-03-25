@@ -20,6 +20,9 @@ gem 'jquery-rails'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem "ransack"
 
+gem 'mysql2',          '0.3.12b5', :platform => :ruby
+gem 'jdbc-mysql',      '5.1.28',   :platform => :jruby
+gem 'thinking-sphinx', '~> 3.1.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'

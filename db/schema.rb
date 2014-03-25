@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140317233251) do
+ActiveRecord::Schema.define(version: 20140325205827) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -65,35 +65,33 @@ ActiveRecord::Schema.define(version: 20140317233251) do
     t.datetime "updated_at"
   end
 
-  create_table "events", force: true do |t|
-    t.string   "production"
-    t.integer  "genre_id"
-    t.integer  "venue_id"
-    t.integer  "author_id"
-    t.integer  "rating"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "company"
-    t.string   "genre"
-    t.text     "title"
-  end
-
   create_table "leads", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  create_table "productions", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "venue_id"
+    t.integer  "city_id"
+    t.integer  "country_id"
+    t.integer  "author_id"
+    t.string   "title"
+    t.text     "description"
+  end
+
   create_table "reviews", force: true do |t|
     t.text     "text"
-    t.integer  "event_id"
+    t.integer  "production_id"
     t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "showings", force: true do |t|
-    t.integer  "event_id"
+    t.integer  "production_id"
     t.date     "date"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -101,7 +99,7 @@ ActiveRecord::Schema.define(version: 20140317233251) do
 
   create_table "starrings", force: true do |t|
     t.integer  "lead_id"
-    t.integer  "event_id"
+    t.integer  "production_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -114,7 +112,6 @@ ActiveRecord::Schema.define(version: 20140317233251) do
     t.string   "postcode"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "company"
   end
 
 end

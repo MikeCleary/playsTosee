@@ -3,7 +3,8 @@ PlaysToSee::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   root  :to => 'pages#home'
-  resources :events,  :only => [:index, :show]
+  resources :productions,  :only => [:index, :show]
+  resources :reviews, :only => [:show]
   resources :pages, :only => [:index]
-  get 'pages/search'
+  get '/search', :to => 'pages#search'
 end

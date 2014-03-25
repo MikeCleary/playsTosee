@@ -1,4 +1,5 @@
 ActiveAdmin.register Venue do
+  permit_params :name, :city_id, :country_id
 
   
   # See permitted parameters documentation:

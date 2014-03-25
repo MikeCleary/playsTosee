@@ -1,4 +1,13 @@
 ActiveAdmin.register City do
+  permit_params :name, :country_id
+
+  form do |f|
+    f.inputs do 
+      f.input :name
+      f.input :country, :include_blank => false
+    end
+  end
+
 
   
   # See permitted parameters documentation:

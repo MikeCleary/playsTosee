@@ -1,12 +1,13 @@
 class PagesController < ApplicationController
 
   def home
-    
+    @productions = Production.limit(4)
+    @reviews = Review.limit(4)
   end
 
 
   def search
-    Event.where('name LIKE ?', params[:event])
+    @productions = Production.search params[:q]
   end
 
 end

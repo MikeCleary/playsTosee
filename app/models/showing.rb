@@ -1,3 +1,3 @@
 class Showing < ActiveRecord::Base
-  belongs_to :event
+  belongs_to :production
 end
